@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <contentSearch>
+      <indexConfigurations>
+        <!--This sample was used in a demonstration using the Launch Sitecore website: http://www.launchsitecore.net/-->
+        <defaultLuceneIndexConfiguration type="Sitecore.ContentSearch.LuceneProvider.LuceneIndexConfiguration, Sitecore.ContentSearch.LuceneProvider">
+          <fields hint="raw:AddComputedIndexField">
+            <field fieldName="PageSearchContent" boost="2f" type="Arke.Sitecore.ComputedSearch.ComputedFields.ContentSearch.ComputedSearchContent, Arke.Sitecore.ComputedSearch" scopeItemId="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" allowNoPresentation="false" templateFieldNames="title|subtitle|body">
+              <visualCrawlerFieldMappings>
+                <visualCrawlerFieldMap templateId="{B65CCE04-BCCB-4A58-B988-753D523C99A7}" templateFieldNames="title|abstract|body" />
+              </visualCrawlerFieldMappings>
+            </field>
+          </fields>
+        </defaultLuceneIndexConfiguration>
+      </indexConfigurations>
+    </contentSearch>
+  </sitecore>
+</configuration>
